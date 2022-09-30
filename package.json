@@ -7,7 +7,7 @@
   "main": "./dist/react-driver-umd.js",
   "module": "./dist/react-driver-es.js",
   "types": "./dist/lib/main.d.ts",
-  "keywords": [],
+  "keywords": ["driver", "Driver", "react-driver", "driver.jsx", "driver.tsx", "reactdriver"],
   "files": [
     "dist"
   ],
