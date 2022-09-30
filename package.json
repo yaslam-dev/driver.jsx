@@ -1,13 +1,20 @@
 {
   "name": "driver.jsx",
   "author": "Yasir Aslam - @Yasir900Aslam",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage": "https://github.com/Yasir900aslam/driver.jsx#readme",
   "license": "MIT",
   "main": "./dist/react-driver-umd.js",
   "module": "./dist/react-driver-es.js",
   "types": "./dist/lib/main.d.ts",
-  "keywords": ["driver", "Driver", "react-driver", "driver.jsx", "driver.tsx", "reactdriver"],
+  "keywords": [
+    "driver",
+    "Driver",
+    "react-driver",
+    "driver.jsx",
+    "driver.tsx",
+    "reactdriver"
+  ],
   "files": [
     "dist"
   ],
