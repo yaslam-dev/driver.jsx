@@ -1,6 +1,25 @@
 # Driver.jsx
 
-A wrapper hook for driver library that can be used in React.
+Create a Seamless User Onboarding and User Journey.
+
+A wrapper hooks and components for driver library that can be used in React > 17.
+
+It uses [driver.jsx]("https://github.com/kamranahmedse/driver.js") that is performant, lightweight and have inbuilt animations.
+
+# Install
+
+## Yarn
+
+```bash
+yarn add driver.jsx
+
+```
+
+## NPM
+
+```bash
+npm install driver.jsx
+```
 
 # Useage
 
@@ -43,4 +62,4 @@ yarn start:dev
 
 Change the code in the lib directory, create an example for in the examples directory or in the src directory
 
-Start coding! tada
+Start coding! 🥳
