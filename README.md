@@ -21,7 +21,7 @@ yarn add driver.jsx
 npm install driver.jsx
 ```
 
-# Useage
+# Getting Started
 
 ```js
 import { useDriver } from "../lib/hooks";
