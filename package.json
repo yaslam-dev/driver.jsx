@@ -1,16 +1,52 @@
 {
   "name": "driver.jsx",
-  "version": "0.0.0",
+  "author": "Yasir Aslam - @Yasir900Aslam",
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib-hello-2.es.js",
+      "require": "./dist/my-lib-hello-2.umd.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panhavsilva/boilerplate-lib-vite-react.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/panhavsilva/boilerplate-lib-vite-react/issues"
+  },
+  "homepage": "https://github.com/panhavsilva/boilerplate-lib-vite-react#readme",
+  "license": "MIT",
+  "main": "./dist/my-lib-hello-2.umd.js",
+  "module": "./dist/my-lib-hello-2.es.js",
+  "types": "./dist/lib/main.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint src --ext ts,tsx",
+    "lint:fix": "yarn lint --fix",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "ci": "yarn lint && yarn type-check",
+    "prepare": "husky install"
+  },
+  "peerDependencies": {
+    "react": ">=17.x"
   },
   "dependencies": {
+    "driver.js": "^0.9.8",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "vite-plugin-dts": "^1.5.0",
+    "vite-plugin-linter": "^1.2.0",
+    "vite-tsconfig-paths": "^3.5.0"
   },
   "devDependencies": {
+    "@types/node": "^18.7.18",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@vitejs/plugin-react": "^1.0.7",

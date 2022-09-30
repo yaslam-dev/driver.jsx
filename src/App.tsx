@@ -1,16 +1,65 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useEffect, useState, useRef, createRef, useLayoutEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { useDriver } from "../lib/hooks";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const { driver, isActivated } = useDriver({
+    allowClose: false,
+  });
+  const firstStepref = useRef<HTMLParagraphElement>(null);
+  const secondStepref = useRef<HTMLAnchorElement>(null);
+  const thirdStepref = useRef<HTMLAnchorElement>(null);
+
+  useEffect(() => {
+    if (firstStepref.current && secondStepref.current && thirdStepref.current) {
+      driver.defineSteps([
+        {
+          element: firstStepref.current,
+          popover: {
+            className: "first-step-popover-class",
+            title: "Title on Popover",
+            description: "Body of the popover",
+            position: "left",
+          },
+        },
+        {
+          element: secondStepref.current,
+          popover: {
+            title: "Title on Popover",
+            description: "Body of the popover",
+            position: "top",
+          },
+        },
+        {
+          element: thirdStepref.current,
+          popover: {
+            title: "Title on Popover",
+            description: "Body of the popover",
+            position: "right",
+          },
+        },
+      ]);
+
+      driver.start();
+
+      // driver.highlight({
+      //   element: ref.current,
+      //   popover: {
+      //     title: "Title for the Popover",
+      //     description: "Description for it",
+      //   },
+      // });
+    }
+  }, [isActivated]);
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
-        <p>
+        <p ref={firstStepref}>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </button>
@@ -20,6 +69,7 @@ function App() {
         </p>
         <p>
           <a
+            ref={secondStepref}
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
@@ -27,8 +77,9 @@ function App() {
           >
             Learn React
           </a>
-          {' | '}
+          {" | "}
           <a
+            ref={thirdStepref}
             className="App-link"
             href="https://vitejs.dev/guide/features.html"
             target="_blank"
@@ -39,7 +90,7 @@ function App() {
         </p>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
