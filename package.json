@@ -2,7 +2,7 @@
   "name": "driver.jsx",
   "author": "Yasir Aslam - @Yasir900Aslam",
   "version": "0.0.1",
-  "homepage": "https://github.com/panhavsilva/boilerplate-lib-vite-react#readme",
+  "homepage": "#readme",
   "license": "MIT",
   "main": "./dist/react-driver-umd.js",
   "module": "./dist/react-driver-es.js",
