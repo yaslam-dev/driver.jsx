@@ -14,7 +14,7 @@ export default defineConfig((configEnv) => ({
       linters: [new EsLinter({ configEnv })],
     }),
     dts({
-      include: ["./types.d.ts"],
+      include: ["./index.d.ts"],
       beforeWriteFile: (filePath, content) => ({
         content,
       }),
