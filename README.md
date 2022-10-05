@@ -2,7 +2,7 @@
 
 Create a Seamless User Onboarding and User Journey.
 
-A wrapper hooks and components for driver library that can be used in React > 17.
+A wrapper hooks (stable) and components (in-development) for driver library that can be used in React > 17.
 
 It uses [driver.js]("https://github.com/kamranahmedse/driver.js") that is performant, lightweight and have inbuilt animations.
 
@@ -41,7 +41,7 @@ useEffect(() => {
 
 # Example
 
-An Example is definde in src directory
+All of the Examples are placed in [examples](https://github.com/Yasir900aslam/driver.jsx/tree/main/examples) directory
 
 # Development
 
