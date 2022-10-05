@@ -8,13 +8,6 @@ It uses [driver.js]("https://github.com/kamranahmedse/driver.js") that is perfor
 
 # Install
 
-## Yarn
-
-```bash
-yarn add driver.jsx
-
-```
-
 ## NPM
 
 ```bash
@@ -24,25 +17,26 @@ npm install driver.jsx
 # Getting Started
 
 ```js
-import { useDriver } from "../lib/hooks";
+import { useDriver } from "driver.jsx";
+import "driver.jsx/dist/style.css";
 
 const { driver, isActivated } = useDriver({
   allowClose: false,
 });
 
-driver.defineSteps([
-  {
-    element: firstStepref.current,
-    popover: {
-      className: "first-step-popover-class",
-      title: "Title on Popover",
-      description: "Body of the popover",
-      position: "left",
-    },
-  },
-]);
+const basicRef = useRef < HTMLAnchorElement > null;
 
-driver.start();
+useEffect(() => {
+  if (basicRef) {
+    driver.highlight({
+      element: basicRef.current,
+      popover: {
+        title: "Title for the Popover",
+        description: "Description for it",
+      },
+    });
+  }
+});
 ```
 
 # Example
