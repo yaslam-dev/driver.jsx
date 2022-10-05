@@ -17,9 +17,9 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@panhasilva/my-lib-hello-2": ["./lib/main.ts"]
+      "@driver.jsx": ["./lib/main.ts"]
     }
   },
-  "include": ["./src", "./lib"],
+  "include": ["./lib"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
