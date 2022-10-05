@@ -24,7 +24,7 @@ const { driver, isActivated } = useDriver({
   allowClose: false,
 });
 
-const basicRef = useRef < HTMLAnchorElement > null;
+const basicRef = useRef(null);
 
 useEffect(() => {
   if (basicRef) {
