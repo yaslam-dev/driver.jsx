@@ -14,7 +14,7 @@ export default defineConfig((configEnv) => ({
       linters: [new EsLinter({ configEnv })],
     }),
     dts({
-      include: ["./types.ts"],
+      include: ["./types.d.ts"],
       beforeWriteFile: (filePath, content) => ({
         content,
       }),
@@ -24,7 +24,8 @@ export default defineConfig((configEnv) => ({
     lib: {
       entry: resolve("lib", "main.ts"),
       name: "driver.jsx",
-      fileName: (format) => `react-driver-${format}.js`,
+      formats: ["es"],
+      fileName: `react-driver`,
     },
     rollupOptions: {
       external: ["react"],

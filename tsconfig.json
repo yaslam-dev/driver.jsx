@@ -20,6 +20,6 @@
       "@driver.jsx": ["./lib/main.ts"]
     }
   },
-  "include": ["./lib"],
+  "include": ["./types.d.ts", "./lib"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
