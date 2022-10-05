@@ -17,6 +17,7 @@ npm install driver.jsx
 # Getting Started
 
 ```js
+import { useEffect, useRef } from "react";
 import { useDriver } from "driver.jsx";
 import "driver.jsx/dist/style.css";
 
