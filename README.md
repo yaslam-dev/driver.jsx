@@ -28,7 +28,7 @@ const { driver, isActivated } = useDriver({
 const basicRef = useRef(null);
 
 useEffect(() => {
-  if (basicRef) {
+  if (basicRef && isActivated) {
     driver.highlight({
       element: basicRef.current,
       popover: {
