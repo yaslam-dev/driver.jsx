@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef, createRef, useLayoutEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import logo from "./logo.svg";
+import { useDriver } from "driver.jsx";
 import "./App.css";
-import { useDriver } from "../lib/hooks";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -43,14 +43,6 @@ function App() {
       ]);
 
       driver.start();
-
-      // driver.highlight({
-      //   element: ref.current,
-      //   popover: {
-      //     title: "Title for the Popover",
-      //     description: "Description for it",
-      //   },
-      // });
     }
   }, [isActivated]);
 
