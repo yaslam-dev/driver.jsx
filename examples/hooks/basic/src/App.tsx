@@ -6,27 +6,27 @@ import "driver.jsx/dist/style.css";
 
 function App() {
   const [count, setCount] = useState(0);
-  const basicRef = useRef<HTMLAnchorElement>(null);
+  const basicRef = useRef<HTMLButtonElement>(null);
   const { driver, isActivated } = useDriver({
     allowClose: false,
   });
 
   useEffect(() => {
-    if (basicRef && isActivated) {
+    if (basicRef.current && isActivated) {
       driver.highlight({
-        element: basicRef.current,
+        element: basicRef.current as HTMLElement,
         popover: {
           title: "Title for the Popover",
           description: "Description for it",
         },
       });
     }
-  });
+  }, []);
 
   return (
     <div className="App">
       <div>
-        <a ref={basicRef} href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank">
@@ -35,7 +35,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button ref={basicRef} onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
