@@ -4,8 +4,8 @@
   "version": "1.3.3",
   "homepage": "https://github.com/Yasir900aslam/driver.jsx#readme",
   "license": "MIT",
-  "main": "./dist/react-driver-es.js",
-  "module": "./dist/react-driver-es.js",
+  "main": "./dist/react-driver-umd.js",
+  "module": "./dist/react-driver-umd.js",
   "types": "./dist/index.d.ts",
   "keywords": [
     "driver",
@@ -22,7 +22,7 @@
   "exports": {
     ".": {
       "import": "./dist/react-driver-es.js",
-      "require": null
+      "require": "./dist/react-driver-umd.js"
     },
     "./dist/style.css": {
       "import": "./dist/style.css",

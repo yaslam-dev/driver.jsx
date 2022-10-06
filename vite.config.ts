@@ -1,4 +1,4 @@
-import { resolve } from "node:path";
+import { format, resolve } from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tsConfigPaths from "vite-tsconfig-paths";
@@ -10,7 +10,7 @@ export default defineConfig((configEnv) => ({
     react(),
     tsConfigPaths(),
     linterPlugin({
-      include: ["./lib}/**/*.{ts,tsx}"],
+      include: ["./src}/**/*.{ts,tsx}"],
       linters: [new EsLinter({ configEnv })],
     }),
     dts({
@@ -24,8 +24,7 @@ export default defineConfig((configEnv) => ({
     lib: {
       entry: resolve("lib", "main.ts"),
       name: "driver.jsx",
-      formats: ["es"],
-      fileName: `react-driver`,
+      fileName: (format) => `react-driver-${format}.js`,
     },
     rollupOptions: {
       external: ["react"],
