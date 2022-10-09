@@ -1,14 +1,14 @@
 # Driver.jsx
 
-Create a Seamless User Onboarding and User Journey.
+Create a Seamless User Onboarding and User Journey in React.
 
 A wrapper hooks (stable) and components (in-development) for driver library that can be used in React > 17.
 
 It uses [driver.js]("https://github.com/kamranahmedse/driver.js") that is performant, lightweight and have inbuilt animations.
 
-# Demo  
-[demo.webm](https://user-images.githubusercontent.com/26070254/194285550-9164f13b-529a-46ec-86cb-e9b9b2f1caea.webm)
+# Demo
 
+[demo.webm](https://user-images.githubusercontent.com/26070254/194285550-9164f13b-529a-46ec-86cb-e9b9b2f1caea.webm)
 
 # Install
 
@@ -26,7 +26,7 @@ import { useDriver } from "driver.jsx";
 import "driver.jsx/dist/style.css";
 
 const { driver, isActivated } = useDriver({
-  allowClose: false, 
+  allowClose: false,
 });
 
 const basicRef = useRef(null);
