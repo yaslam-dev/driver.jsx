@@ -2,23 +2,31 @@
 
 Create a Seamless User Onboarding and User Journey in React.
 
-A wrapper hooks (stable) and components (in-development) for driver library that can be used in React > 17.
+A lightweight and fast wrapper hooks (stable) and components (in-development) for driver library that can be used in React > 17.
 
 It uses [driver.js]("https://github.com/kamranahmedse/driver.js") that is performant, lightweight and have inbuilt animations.
 
-# Demo
+## Demo
 
 [demo.webm](https://user-images.githubusercontent.com/26070254/194285550-9164f13b-529a-46ec-86cb-e9b9b2f1caea.webm)
 
-# Install
+## Install
 
-## NPM
+> To reduce package size, we have removed driver.js dependency from the project. Before installing please install driver.js.
+
+### NPM
 
 ```bash
 npm install driver.jsx
 ```
 
-# Getting Started
+### Yarn
+
+```bash
+yarn add driver.jsx
+```
+
+## Getting Started
 
 ```js
 import { useEffect, useRef } from "react";
@@ -44,11 +52,11 @@ useEffect(() => {
 });
 ```
 
-# Example
+## Example
 
 All of the Examples are placed in [examples](https://github.com/Yasir900aslam/driver.jsx/tree/main/examples) directory
 
-# Development
+## Development
 
 Setting up a local development environment is easy!
 
