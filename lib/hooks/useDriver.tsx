@@ -1,17 +1,16 @@
-import Driver, { DriverOptions } from "driver.js";
+import { driver, Config } from "driver.js";
 import { useRef } from "react";
 import "driver.js/dist/driver.min.css";
 
-export const useDriver = (props: DriverOptions) => {
+export const useDriver = (props: Config) => {
   const driverRef = useRef(
     (() => {
-      const driver = new Driver(props);
-      return driver;
+      return driver(props);
     })()
   );
 
   return {
     driver: driverRef.current,
-    isActivated: driverRef.current.isActivated,
+    isActivated: driverRef.current.isActive,
   };
 };
