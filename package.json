@@ -1,7 +1,7 @@
 {
   "name": "driver.jsx",
   "author": "Yasir Aslam - @Yasir900Aslam",
-  "version": "1.3.6",
+  "version": "1.4.0",
   "homepage": "https://github.com/Yasir900aslam/driver.jsx#readme",
   "license": "MIT",
   "main": "./dist/react-driver-umd.js",
