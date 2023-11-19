@@ -31,7 +31,7 @@ yarn add driver.jsx
 ```js
 import { useEffect, useRef } from "react";
 import { useDriver } from "driver.jsx";
-import "driver.jsx/dist/style.css";
+import "driver.js/dist/driver.css";
 
 const { driver, isActivated } = useDriver({
   allowClose: false,
