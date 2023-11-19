@@ -1,6 +1,5 @@
 import { driver, Config } from "driver.js";
 import { useRef } from "react";
-import "driver.js/dist/driver.css";
 
 export const useDriver = (props: Config) => {
   const driverRef = useRef(

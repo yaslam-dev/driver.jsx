@@ -1,12 +1,12 @@
-import Driver, { DriverOptions } from "driver.js";
+import { Config, Driver } from "driver.js";
 
 declare module "driver.jsx" {
-  function useDriver(initialValue: DriverOptions): {
-    driver: Driver;
+  function useDriver(initialValue: Config): {
+    d: Driver;
     isActivated: boolean;
   };
 
-  export { useDriver, DriverOptions };
+  export { useDriver, Config };
 }
 
 export {};
